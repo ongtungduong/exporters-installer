@@ -1,29 +1,35 @@
-# Node exporter installer for Ubuntu servers
+# Exporters installer for Ubuntu servers
 
-**This project is a bash script that aims to install node exporter on Ubuntu servers, as easily as possible!**
+**This project is a bash script that aims to install exporters on Ubuntu servers, as easily as possible!**
+
+## Node Exporter
 
 - Default node exporter port is 9100.
 
-## Usage
-
-Run the following command to install the latest version of node exporter on your Ubuntu server:
+- Run the following command to install node exporter on your Ubuntu server:
 
 ```bash
-curl https://raw.githubusercontent.com/ongtungduong/node-exporter-installer/main/install-node-exporter.sh | bash
+bash <(curl -sSL https://github.com/ongtungduong/exporters-installer/raw/main/node-exporter.sh)
 ```
 
-Run the following command to install the latest version of node exporter with custom port on your Ubuntu server.
-
-Replace <PORT> with your custom port before running the command.
+- To use different port, for example 17017, run the following command:
 
 ```bash
-curl https://raw.githubusercontent.com/ongtungduong/node-exporter-installer/main/install-node-exporter.sh | EXPORTER_PORT=<PORT> bash
+EXPORTER_PORT="17017" bash <(curl -sSL https://github.com/ongtungduong/exporters-installer/raw/main/node-exporter.sh)
 ```
 
-Run the following command to install specific version of node exporter on your Ubuntu server.
+## Postgres Exporter
 
-Replace <VERSION> with your custom version before running the command.
+- Default postgres exporter port is 9187.
+
+- Run the following command to install postgres exporter on your Ubuntu server:
 
 ```bash
-curl https://raw.githubusercontent.com/ongtungduong/node-exporter-installer/main/install-node-exporter.sh | EXPORTER_VERSION=<VERSION> bash
+bash <(curl -sSL https://github.com/ongtungduong/exporters-installer/raw/main/postgres-exporter.sh)
+```
+
+- To use different port, for example 17018, run the following command:
+
+```bash
+EXPORTER_PORT="17018" bash <(curl -sSL https://github.com/ongtungduong/exporters-installer/raw/main/postgres-exporter.sh)
 ```
